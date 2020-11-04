@@ -1,0 +1,65 @@
+
+<!-- Question -->
+
+<script type="text/template" data-template="question">
+
+    <% if(typeof(tmpl.result) !== "undefined") { %>
+        
+        <div class="heading">
+            <em class="<%- tmpl.css_class %>"><%- tmpl.choice %>) <%- tmpl.choice_text %></em>
+            <h2><%- tmpl.info %></h2>
+        </div> <!--/.heading -->
+        
+        <%= tmpl.render('chart', { answer_emphasis_type: tmpl.answer_emphasis_type, answer_emphasis: tmpl.answer_emphasis, text: tmpl.answer }) %>
+
+        <p class="actions">
+            <button data-event="render_next_question" class="alert">Next Question <i class="icon-arrow-right"></i></button>
+        </p>
+
+        <p class="source-text">*<%- tmpl.source %></p>
+
+    <% } else { %>
+
+       <div data-question="<%- tmpl.key %>">
+            
+            <div class="heading">
+                <em>Question <%- tmpl.key %></em>
+                <h2><%- tmpl.q.question %></h2>
+            </div> <!--/.heading -->
+
+            <% if( tmpl.q.type === 'multiple') { %>
+                <%= tmpl.render('question-multiple-choice', { question: tmpl.q }) %>
+            <% } %>
+
+            <% if( tmpl.q.type === 'slider') { %>
+                <%= tmpl.render('question-slider', { question: tmpl.q }) %>
+            <% } %>
+        </div>
+
+    <% } %>
+
+</script>
+
+<!-- Question: Multiple Choice -->
+
+<script type="text/template" data-template="question-multiple-choice">                   
+    <ul class="styled">
+    <% _.each(tmpl.question.choices, function(choice, key) { %>
+        <li data-choice="<%- key %>" data-event="choice_selected"><em><%- key %>)</em> <%- choice %></li>
+    <% }); %>
+    </ul>
+</script>
+
+<!-- Question: Slider -->
+
+<script type="text/template" data-template="question-slider">                   
+           <div class="slider-container">
+                <label class="left">$1M</label>
+                <label class="middle">$2M</label>
+                <label class="right">$3.2M</label>
+                <input type="text" data-slider="true" data-slider-range="1,3.2" data-slider-values="1,1.2,1.4,1.6,1.8,2.0,2.2,2.4,2.6,2.8,3.0,3.2" data-slider-snap="true" id="questionSlider">
+            </div> <!--/.slider-container -->
+    <p class="actions">
+        <button data-event="slider_selected" class="alert">Finalize my IQ <i class="icon-arrow-right"></i></button>
+    </p>
+</script>

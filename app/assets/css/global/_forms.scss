@@ -1,0 +1,149 @@
+
+/* Forms
+   ========================================================================== */
+
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit; /* 1 */
+  font: inherit; /* 2 */
+  margin: 0; /* 3 */
+  outline: 0;
+}
+
+button {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
+}
+
+textarea {
+  overflow: auto;
+}
+
+optgroup {
+  font-weight: bold;
+}
+
+input[type="text"] {
+  color: #333;
+  padding: 10px 10px 5px 10px;
+}
+
+.fancy-input {
+  margin-top: 85px;
+  border-bottom: 2px solid white;
+  position: relative;
+  @include break($mobile) { margin-top: 40px; }
+
+  input {
+    @include placeholder-color(white);
+    background: transparent;
+    border: 0;
+    color: white;
+    font-family: $rockwell;
+    margin: 0;
+    padding-left: 0;
+    padding-bottom: 10px;
+    width: 100%;
+    max-width: 400px;
+
+    @include break($mobile) { max-width: 90%; }
+  }
+}
+
+.fancy-input:after {
+  border-style: solid;
+  border-width: 0.2em 0.2em 0 0;
+  content: '';
+  display: inline-block;
+  height: 0.50em;
+  right: 0px;
+  position: relative;
+  top: 0.78em;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  vertical-align: top;
+  width: 0.50em;
+}
+
+.input-error {
+  @include clearfix;
+  @include transition(all 0.3s ease-in-out);
+
+  background: $red;
+  color: white;
+  opacity: 0;
+  font-size: 0.7em;
+  padding: 45px 25px;
+  position: relative;
+  padding: 15px 15px 0 15px;
+  top: 10px;
+  display: none;
+  width: 430px;
+  p { margin: 7px 0 0 0; }
+  &.visible { opacity: 1; display: block; }
+}
+
+.input-error:before {
+  content: '';
+  position: absolute;
+  top: -22px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 24px 0 0 15px;
+  border-color: transparent transparent transparent $red;
+}

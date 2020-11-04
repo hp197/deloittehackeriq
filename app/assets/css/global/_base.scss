@@ -1,0 +1,59 @@
+
+/* Base
+   ========================================================================== */
+
+*, 
+*:before, 
+*:after {
+	box-sizing: inherit;
+}
+
+html {
+	@include text-size-adjust(100%);
+  box-sizing: border-box;
+  color: $white;
+  font-family: sans-serif;
+  
+  -webkit-font-smoothing: antialiased;
+
+  &.bg1 { @include background-cover("../img/bg1.jpg", $black) }
+  &.bg2 { @include background-cover("../img/bg2.jpg", $black) }
+  &.bg3 { @include background-cover("../img/bg3.jpg", $black) }
+  &.bg4 { @include background-cover("../img/bg4.jpg", $black) }
+  &.bg5 { @include background-cover("../img/bg5.jpg", $black) }
+  &.bg6 { @include background-cover("../img/bg6.jpg", $black) }
+  &.bg7 { @include background-cover("../img/bg3.jpg", $black) }
+  &.bg8 { @include background-cover("../img/bg3.jpg", $black) }
+
+  @include break($mobile) {
+    background: $black !important;
+  }
+}
+  
+body {
+  font-size: 1.5em;
+  font-family: $frutiger;
+	margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+nav,
+section,
+summary {
+	display: block;
+}
+
+img {
+  border: 0;
+}
+
+[hidden],
+template {
+	display: none;
+}

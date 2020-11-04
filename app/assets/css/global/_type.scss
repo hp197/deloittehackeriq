@@ -1,0 +1,126 @@
+
+/* Typography
+   ========================================================================== */
+
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+fmues
+b,
+strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+h1 {
+  font-family: $rockwell;
+  font-size: 2em;
+  margin: 0.67em 0;
+  font-weight: 200;
+}
+
+h2 {
+  font-family: $frutiger-bold;
+  font-size: 1.3em;
+  letter-spacing: -0.025em;
+  line-height: 1.1em;
+  margin: 10px 0 0 0;
+}
+
+h3 {
+  font-weight: normal;
+  font-size: 2em;
+  @include break($mobile) { font-size: 1.1em; margin-top: 50px; }
+}
+
+h5 {
+  font-family: $frutiger-bold;
+  font-size: 2.5em;
+  letter-spacing: -0.025em;
+  line-height: 1.1em;
+  margin: 10px 0 0 0;
+}
+
+
+em {
+  display: inline-block; 
+  font-style: normal;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.150em;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+
+.percent {
+    font-size: 0.5em;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    top: -12px;
+    margin-left: 1px;
+}
+
+.strikeout {
+  color: $red;
+  text-decoration: line-through;
+}
+
+.score {
+  border: 1px solid #888;
+  background: #1a1919;
+  padding: 20px;
+
+  .large {
+    font-size: 2.7em;
+  }
+
+}
+
+
+p.small { font-size: 0.550em; }
+

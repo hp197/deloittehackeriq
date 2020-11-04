@@ -1,0 +1,73 @@
+
+/* Donut Chart
+   ========================================================================== */
+
+$circle-size: 325px;
+$circle-background: #d6dadc;
+$circle-color: $red;
+$inset-size: 290px;
+$inset-color: #1a1919;
+$transition-length: 1s;
+
+$circle-size-mobile: 255px;
+$inset-size-mobile: 220px;
+
+.donut-chart {
+    margin: -8px auto;
+    width: $circle-size;
+    height: $circle-size;
+    background-color: $circle-background;
+    border-radius: 50%;
+
+    @include break($mobile) { height: $circle-size-mobile; width: $circle-size-mobile }
+
+    .inset {
+        width: $inset-size;
+        height: $inset-size;
+        position: absolute;
+        margin-left: ($circle-size - $inset-size)/2;
+        margin-top: ($circle-size - $inset-size)/2;
+        background-color: $inset-color;
+        border-radius: 50%;
+
+        @include break($mobile) { 
+            height: $inset-size-mobile; 
+            width: $inset-size-mobile;
+            margin-left: ($circle-size-mobile - $inset-size-mobile)/2;
+            margin-top: ($circle-size-mobile - $inset-size-mobile)/2;
+        }
+    }
+    .inset-text {
+        @include vertical-align;
+        position: absolute;
+        text-align: center;
+        font-size: 0.850em;
+        padding: 25px;
+        width: 100%;
+        @include break($mobile) { font-size: 0.650em; }
+    }
+}
+
+.donut-chart .circle {
+    .mask, .fill {
+        width: $circle-size;
+        height: $circle-size;
+        position: absolute;
+        border-radius: 50%;
+        transition: -webkit-transform $transition-length;
+        transition: -ms-transform $transition-length;
+        transition: transform $transition-length;
+        -webkit-backface-visibility: hidden;
+
+        @include break($mobile) { height: $circle-size-mobile; width: $circle-size-mobile }
+    }
+    .mask {
+        clip: rect(0px, $circle-size, $circle-size, $circle-size/2);
+        @include break($mobile) { clip: rect(0px, $circle-size-mobile, $circle-size-mobile, $circle-size-mobile/2); }
+        .fill {
+            clip: rect(0px, $circle-size/2, $circle-size, 0px);
+            background-color: $circle-color;
+            @include break($mobile) {  clip: rect(0px, $circle-size-mobile/2, $circle-size-mobile, 0px); }
+        }
+    }
+}

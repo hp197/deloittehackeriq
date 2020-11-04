@@ -1,0 +1,51 @@
+<!doctype html>
+<html class="no-js bg1" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Hacker Game</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="stylesheet" href="app/assets/css/MyFontsWebfontsKit.css">
+        <link rel="stylesheet" href="app/assets/css/style.min.css">
+
+        <script src="//use.typekit.net/oja1mhf.js"></script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    </head>
+    <body>
+
+        <div class="mobile-bg">
+            <img src="app/assets/img/bg1.jpg">
+        </div>
+
+        <div data-template="results"></div>
+
+        <div class="container">
+            <div data-template="index"></div>
+            <div data-template="unregistered"></div>
+            <div data-template="question">
+                <div data-template="question-result"></div>
+                <div data-template="question-multiple-choice"></div>
+                <div data-template="question-slider"></div>
+            </div>
+        </div> <!--/.container -->
+
+        <!-- Loading screen -->
+        <div class="overlay" data-loader-overlay="hide">
+            <span class="centered" data-loader>(Loading...)</span>
+        </div>
+        
+        <!-- Underscore Templates -->
+        {% for template in templates %}
+            {% include 'templates/' ~ template %}
+        {% endfor %}
+
+        <img src="app/assets/img/logo.png" alt="Deloitte Greenhouse: Perspectives: Cyber Risk" class="logo">
+
+
+        <!-- JS -->
+        <script src="app/assets/js/main.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+
+/* Buttons
+   ========================================================================== */
+
+button, .button {
+  @include appearance(none);
+  @include transition(all 0.3s ease-in);
+
+  background: transparent;
+  border: 1px solid white;
+  padding: 16px 24px 11px 24px;
+  overflow: hidden;
+  position: relative;
+  opacity: 1;
+
+  &:after {
+    @include transition(all 0.3s ease-in);
+    
+    background: white;
+    content: '';
+    display: block;
+    height: 0%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &:disabled:hover {
+    color: white;
+    &:after { height: 0; }
+  }
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.2;
+  }
+}
+
+// Alert Style
+
+  button.alert, .button.alert {
+    background: $red;
+    border: 1px solid $red;
+    color: white;
+
+    &:hover { background: darken($red, 14%); color: white; }
+  }
+
+
+  // Large outline-style: 
+
+  button.large, .button.large {
+    color: white;
+    font-family: $rockwell-bold;
+    padding: 24px 30px 19px 30px;
+  }

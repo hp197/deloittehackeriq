@@ -1,0 +1,154 @@
+{
+    "questions": {
+        
+        "1": {
+            "name": "Question: #1",
+            "question": "Who would likely be your best target to manipulate your way into the system?",
+            "type": "multiple",
+            "answer": "b",
+            "choices": {
+                "a": "Executive Administrator",
+                "b": "Contractor",
+                "c": "IT Administrator",
+                "d": "Lower Level employee"
+            },
+            "chart": {
+                "progress": 80,
+            },
+            "text": {
+                "emphasis": "40",
+                "type": "%",
+                "answer": "of all social engineering hacks begin with outside contractors. IT administrators follow closely behind at 30%. *",
+                "correct": "You're beginning to scare me.",
+                "incorrect": "I guess I don't have to be scared of you.",
+                "source": "Canergie Mellon CERT UIT 2014 Report; Thycotic Black Hat Hacker Survey Executive Report"
+            }
+        },
+        
+        "2": {
+            "name": "Question: #2",
+            "question": "If you were launching a POS intrusion, which kind of business would you most likely be attacking?",
+            "type": "multiple",
+            "answer": "a",
+            "choices": {
+                "a": "A hotel",
+                "b": "A woman's clothing store",
+                "c": "A bank's ATM",
+                "d": "A grocery store"
+            },
+            "chart":{
+                "progress": 135,
+            },
+            "text": {
+                "emphasis": "75",
+                "type": "%*",
+                "answer": "of attacks are unleashed against the travel and hospitality industry.",
+                "correct": "You’ve got real potential.",
+                "incorrect": "You’d most likely choose a different target.",
+                "source": "Verizon 2014 Data Breach Investigations Report"
+            }
+        },
+
+        "3": {
+            "name": "Question: #3",
+            "question": "If you were trying to crack into a bank’s system what would likely be your best point of entry?",
+            "type": "multiple",
+            "answer": "c",
+            "choices": {
+                "a": "The online banking website",
+                "b": "The ATM system",
+                "c": "The mobile banking app",
+                "d": "An employee access account"
+            },
+            "chart":{
+                "progress": 130,
+            },
+            "text": {
+                "emphasis": "72",
+                "type": "%*",
+                "answer": "more mobile banking attacks were launched in 2014 than 2013.",
+                "correct": "You could be cashing in as a hacker.",
+                "incorrect": "The banks are safe from you…",
+                "source": "Kaspersky Lab IT Threat evolution 2014"
+            }
+        },
+
+        "4": {
+            "name": "Question: #4",
+            "question": "To bring down a company’s reputation, you’re looking to access and then expose some potentially embarrassing corporate emails.  The most popular method of doing this is:",
+            "type": "multiple",
+            "answer": "d",
+            "choices": {
+                "a": "Key logging",
+                "b": "Social engineering",
+                "c": "Trojans",
+                "d": "Phishing"
+            },
+            "chart":{
+                "progress": 178,
+            },
+            "text": {
+                "emphasis": "99",
+                "type": "%*",
+                "answer": "of Black Hat hackers say phishing is still incredibly effective for hacking.",
+                "correct": "You might have another career in hacking.",
+                "incorrect": "I’m sure you have other skills.",
+                "source": "Thycotic Black Hat Hacker Survey Executive Report  *Kaspersky Lab IT Threat evolution 2014"
+            }
+        },
+
+        "5": {
+            "name": "Question: #5",
+            "question": "To make a big financial score as a hacker, your best bet would likely be:",
+            "type": "multiple",
+            "answer": "c",
+            "choices": {
+                "a": "Fast collection of credit cards numbers to use fraudulently ",
+                "b": "Doxing and then blackmailing an executive",
+                "c": "Long-term manipulation of a system to gather information to be sold later",
+                "d": "Install malware to slowly syphon off funds"            },
+            "chart":{
+                "progress": 178,
+            },
+            "text": {
+                "emphasis": "200",
+                "type": " days*",
+                "answer": "is the average time a hacker spends in a system syphoning information.",
+                "correct": "You’d be collecting sellable data in no time.",
+                "incorrect": "Looks like you’d be leaving empty-handed.",
+                "source": "Exabeam 2014; *Kaspersky Lab IT Threat evolution 2014; Verizon Data Investigation Report 2015"
+            }
+        },
+
+        "6": {
+            "name": "Bonus Question",
+            "question": "Today you've stolen a million customer records. How much can you sell them for?",
+            "type": "slider",
+            "answer": "2.4",
+            "range": {
+                "min": "1",
+                "max": "3.1"
+            },
+            "text": {
+                "answer": "",
+                "correct": "That's the answer we're looking for!",
+                "incorrect": "Wrong. Wrong. Wrong."
+            }
+        }
+    },
+
+    "hacker_names": [
+        "zer0c00l",
+        "Ac1dBurn",
+        "Crash Overr1de",
+        "Lord N1k0n",
+        "Phr3ak",
+        "The Gibs0n",
+        "Tr1n1ty",
+        "Neo",
+        "Dark0",
+        "Miss Judgement",
+        "Confident Whiz",
+        "Adorable Hijacker"
+    ]
+}

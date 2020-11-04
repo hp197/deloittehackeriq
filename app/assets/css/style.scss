@@ -1,0 +1,63 @@
+
+@font-face {
+  font-family: 'FrutigerNextPro-Bold';
+  src: url('../fonts/FrutigerNextPro-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/FrutigerNextPro-Bold.otf')  format('opentype'),
+       url('../fonts/FrutigerNextPro-Bold.woff') format('woff'), 
+       url('../fonts/FrutigerNextPro-Bold.ttf')  format('truetype'), 
+       url('../fonts/FrutigerNextPro-Bold.svg#FrutigerNextPro-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FrutigerNextPro-Regular';
+  src: url('../fonts/FrutigerNextPro-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/FrutigerNextPro-Regular.otf') format('opentype'),
+       url('../fonts/FrutigerNextPro-Regular.woff') format('woff'),
+       url('../fonts/FrutigerNextPro-Regular.ttf')  format('truetype'),
+       url('../fonts/FrutigerNextPro-Regular.svg#FrutigerNextPro-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Breakpoints */
+
+$mobile: 900px;
+
+/* Color Scheme */
+
+$black: #050808;
+$white: #ffffff;
+$red: #d62631;
+
+/* Fonts */
+
+$rockwell: "RockwellStd", serif;
+$rockwell-bold: "RockwellStd-Bold", serif;
+$frutiger: "FrutigerNextPro-Regular", sans-serif;
+$frutiger-bold: "FrutigerNextPro-Bold", sans-serif;
+
+@import "lib/mixins";
+@import "lib/helpers";
+
+@import "global/base";
+@import "global/layout";
+@import "global/type";
+@import "global/links";
+@import "global/forms";
+@import "global/icons";
+
+@import "components/lists";
+@import "components/tables";
+@import "components/buttons";
+@import "components/charts";
+@import "components/sliders";
+
+
+
+
+
+
+
+

@@ -1,0 +1,226 @@
+$container-width: 560px;
+$container-padding: 25px 0 0 100px;
+
+.container {
+  padding: $container-padding;
+  width: $container-width; 
+  @include break($mobile) {
+    width: 100%;
+    padding: 60px 25px 5px 25px;
+    overflow: hidden;
+  }
+}
+
+.heading {
+  background: #2a2a29;
+  padding: 25px;
+  font-size: 0.7em;
+  position: relative;
+  left: -100px;
+  margin-top: 25px;
+  margin-bottom: 40px;
+  width: $container-width;
+
+  @include break($mobile) {
+    width: 100%;
+    left: auto;
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+}
+
+.actions {
+  margin: 30px 0 0 0;
+  text-align: center;
+}
+
+.overlay {
+	@include fullscreen(100);
+	background: white;
+	opacity: 0.9;
+}
+
+.logo {
+  max-width: 400px;
+  position: fixed;
+  bottom: 25px;
+  right: 50px;
+
+  @include break($mobile) {
+    display: block;
+    margin: 25px auto 10px auto;
+    position: relative;
+    bottom: auto;
+    right: auto;
+    max-width: 300px;
+  }
+}
+
+.results {
+  max-width: 600px;
+  margin: 20px 0px 0px 40px;
+  @include break($mobile) {
+    max-width: 100%;
+    margin: 0;
+    padding: 50px 25px 0px 25px;
+  }
+
+  a { color: white; }
+}
+
+
+// Panels for Intro Screens
+
+
+.panel1 {
+  background: $red;
+  padding: 6px 50px;
+  p { @extend h1; font-weight: bold; }
+  position: fixed;
+  left: 40px;
+  top: 80px;
+
+  @include break($mobile) {
+    background: none;
+    padding: 0;
+    font-size: 0.550em;
+    position: relative;
+    margin-bottom: 40px;
+    left: auto;
+    top: auto;
+    width: 100%;
+  }
+}
+
+.panel2 {
+  background: rgba(0,0,0, 0.7);
+  padding: 6px 40px;
+  position: fixed;
+  left: 145px;
+  top: 192px;
+  max-width: 540px;
+
+  @include break($mobile) {
+    background: none;
+    font-size: 0.8em;
+    position: relative;
+    left: auto;
+    top: auto;
+    padding: 0 20px 0px 0;
+    max-width: 100%;
+  }
+}
+
+.panel3 {
+  background: rgba(83,20,23, 0.9);
+  padding: 9px 20px 4px 20px;
+  position: fixed;
+  left: 100px;
+  top: 344px;
+  max-width: 480px;
+
+  @include break($mobile) {
+    background: none;
+    font-size: 0.8em;
+    position: relative;
+    left: auto;
+    top: auto;
+    padding: 0 20px 20px 0;
+    max-width: 100%;
+  }
+}
+
+.panel4 {
+  position: fixed;
+  left: 210px;
+  top: 500px;
+
+  @include break($mobile) {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+  }
+}
+
+.panel5 {
+  position: fixed;
+  left: 98px;
+  top: 220px;
+  max-width: 430px;
+
+  @include break($mobile) {
+    width: 100%;
+    position: relative;
+    left: auto;
+    font-size: 0.7em;
+    top: auto;
+  }
+}
+
+div[data-template] {
+  @include transition(all 0.3s);
+  
+  opacity: 1;
+  position: relative;
+  top: 0;
+  height: auto;
+
+  &.animate-in { opacity: 0; height: 0; }
+  &.animate-top { opacity: 0; top: 150px; }
+}
+
+.background-loader {
+  @include transition(all 0.9s);
+  display: none;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: -1;
+  opacity: 1;
+  &.fade { opacity: 0; }
+}
+
+
+.source-text {
+  font-size: 16px;
+  line-height: 1.6em;
+  margin: 35px auto 10px auto;
+  max-width: 390px;
+  text-align: center;
+  @include break($mobile) {
+    text-align: center;
+  }
+}
+
+
+
+// Mobile BG
+
+.mobile-bg {
+  position: absolute;
+  height: 350px;
+  width: 100%;
+  display: none;
+  overflow: hidden;
+  z-index: -1;
+
+  img { max-width: 100% }
+
+  @include break($mobile) {
+    display: block;
+  }
+
+    @include break(500px) {
+    height: 200px;
+  }
+}
+
+
+
+
+
+
+
+
